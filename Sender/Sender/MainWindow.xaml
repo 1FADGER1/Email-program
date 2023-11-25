@@ -1,0 +1,24 @@
+﻿<Window x:Class="Sender.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sender"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="10,67,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="476" Height="328" FontSize="16" BorderBrush="#FF02245B" BorderThickness="4,4,4,4"/>
+        <Label x:Name="label" Content="Текст письма" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <ListBox x:Name="listBox" Margin="510,67,24,233" BorderThickness="2,2,2,2" BorderBrush="#FF7E9FFF">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding}" />
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button x:Name="buttonAdd" Content="Добавить" HorizontalAlignment="Left" Margin="510,211,0,0" VerticalAlignment="Top" Width="80" Height="26" Background="#FFD9FCFF" Click="buttonAdd_Click"/>
+        <Button x:Name="buttonDelete" Content="Удалить" HorizontalAlignment="Left" Margin="659,211,0,0" VerticalAlignment="Top" Width="80" Height="26" Background="#FFFFD9D9" Click="buttonDelete_Click"/>
+        <Button x:Name="button" Content="Отправить" HorizontalAlignment="Left" Margin="654,366,0,0" VerticalAlignment="Top" Height="29" Width="90" Background="White" BorderBrush="#FF5B5B5B" BorderThickness="2,2,2,2" FontSize="14" Click="button_Click"/>
+
+    </Grid>
+</Window>
